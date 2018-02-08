@@ -11,7 +11,7 @@ minionsRouter.get('/', (req, res, next) => {
     minions = getAllFromDatabase('minions');
     res.send(minions);
 });
-
+ 
 minionsRouter.param('minionId', (req, res, next, id) => {
     const minion = getFromDatabaseById('minions', id);
     if (minion) {
